@@ -10,11 +10,11 @@ class DateAndTime{
   String time;
   bool isDay;
 
-  DateAndTime({this.location,this.url,this.img});
+  DateAndTime({this.location,this.url,this.img,this.time});
 
   Future <void> getdata() async{
     try {
-    Response response = await get(Uri.parse('http://worldtimeapi.org/api/timezone/America/$url'));
+    Response response = await get(Uri.parse('http://worldtimeapi.org/api/timezone/Asia/Kolkata'));
     Map data = jsonDecode(response.body);
     
     String date = data['datetime'];
